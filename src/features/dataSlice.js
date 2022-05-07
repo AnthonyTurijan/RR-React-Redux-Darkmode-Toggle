@@ -14,7 +14,7 @@ export const dataSlice = createSlice({
             return {...state, apiData: action.payload}
         },
         incrementId: (state) => {
-            return {...state, objectData: state.objectId + 1 }
+            return { ...state, objectId: state.objectId + 1}
         },
         decrementId: (state)=>{
             return { ...state, objectId: state.objectId - 1}

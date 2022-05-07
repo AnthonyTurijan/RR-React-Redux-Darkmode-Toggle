@@ -24,8 +24,10 @@ function App(props) {
         <button onClick={() => {dispatch(incrementId())}}>Next</button>
         <button onClick={() => {dispatch(decrementId())}}>Back</button>
       </div>
-      <input onChange={(e) => { }} />
+      <input  value={data.ObjectId} onChange={(e) => {dispatch(inputId(Number(e.target.value))) }} />
       <div>
+        {data.objectId}
+        <br/>
         {data.apiData.primaryImage ? <img src= {data.apiData.primaryImage} alt={data.apiData.title} /> : <p>Waiting for image</p>}
       </div>
     </div>
